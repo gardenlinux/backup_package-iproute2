@@ -1,0 +1,32 @@
+Subject: Don't require libdb for arpd
+
+diff -Naur a/debian/control b/debian/control
+--- a/debian/control    2023-09-09 15:19:26.000000000 +0000
++++ b/debian/control    2023-09-13 06:58:41.193137556 +0000
+@@ -17,7 +17,6 @@
+                libbsd-dev,
+                libbpf-dev (>= 1:0.1.0~),
+                libcap-dev,
+-               libdb-dev,
+                libelf-dev,
+                libmnl-dev,
+                libselinux1-dev,
+@@ -29,8 +28,6 @@
+ Package: iproute2
+ Priority: important
+ Architecture: linux-any
+-Provides: arpd
+-Conflicts: arpd
+ Depends: ${misc:Depends}, ${shlibs:Depends}, libcap2-bin,
+ Recommends: ${ipmods:Recommends}
+ Suggests: iproute2-doc, python3:any
+diff -Naur a/debian/iproute2.install b/debian/iproute2.install
+--- a/debian/iproute2.install   2023-09-09 15:32:51.000000000 +0000
++++ b/debian/iproute2.install   2023-09-13 06:58:55.145019688 +0000
+@@ -1,6 +1,5 @@
+ usr/include/iproute2/
+ usr/lib/iproute2/
+-sbin/arpd /usr/sbin
+ sbin/bridge
+ sbin/dcb
+ sbin/devlink
