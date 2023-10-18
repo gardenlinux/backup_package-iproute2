@@ -1,4 +1,4 @@
 on: push
 jobs:
   iproute2:
-    uses: gardenlinux/package-build/.github/workflows/build_pkg.yml
+    uses: gardenlinux/package-build/.github/workflows/build_pkg.yml@main
