@@ -1,3 +1,4 @@
+name: iproute2
 on: push
 jobs:
   iproute2:
