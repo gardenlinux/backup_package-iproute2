@@ -1,7 +1,5 @@
 name: iproute2
-on:
-  - push
-  - workflow_dispatch
+on: push
 jobs:
-  iproute2:
+  build_pkg:
     uses: gardenlinux/package-build/.github/workflows/build_pkg.yml@main
