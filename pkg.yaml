@@ -1,8 +1,0 @@
-source: git+https://github.com/iproute2/iproute2.git#v6.6.0
-debian_source: iproute2
-email: "contact@gardenlinux.io"
-name: "Garden Linux Builder"
-distribution: gardenlinux
-version: 6.6.0-1
-version_suffix: gl0
-message: "Rebuild for Garden Linux."
